@@ -24,12 +24,11 @@ struct ContentView: View {
             Text("Choose yo sport")
                 .font(.largeTitle.bold())
             
-            Spacer()
             
             VStack{
                 Circle()
                     .fill(colors.randomElement() ?? .blue)
-                    .padding()
+                    .padding(40)
                     .overlay(
                         Image(systemName: "figure.\(selected.lowercased())")
                             .font(.system(size: 144))
