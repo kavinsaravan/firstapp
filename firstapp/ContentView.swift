@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
     
@@ -40,12 +41,14 @@ struct ContentView: View {
                 .transition(.slide)
                 .id(id)
             }
+            
             Button("Try again"){
                 withAnimation(.easeInOut(duration: 1)){
                     selected=activities.randomElement() ?? "Archery"
                     id += 1
                 }
             }
+            
             .buttonStyle(.borderedProminent)
         }
     }
